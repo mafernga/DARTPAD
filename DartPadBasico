@@ -1,0 +1,68 @@
+void main(){
+  
+  //Numeros
+  int empleados =10;
+  double pi=3.141516;
+    
+    print (empleados);
+    print (pi);
+    print ('$empleados - $pi');
+  
+  // String cadena de caracteres
+  
+  String nombre ='Mario';
+  print('Mi nombre es $nombre');
+  print(nombre[0]);
+  print(nombre[nombre.length -1]);
+  print("mi nombre comienza con la letra: " + nombre[0]);
+  print("mi nombre termina en la letra: " + nombre[nombre.length-1]);
+  
+  // BOOLEANOS
+  
+  bool activado=true;
+  print (activado);
+  
+  activado =!activado; //aqui cambiamos el valor de true a false
+  print (activado);
+  
+  if (activado == true){
+    print('El motor esta encendido');
+     }
+  else {
+    print('El motor esta apagado');
+  }
+  
+  
+    if (activado){
+    print('El motor esta encendido');
+     }
+  else {
+    print('El motor esta apagado');
+  }
+  
+      if (!activado){
+    print('El motor esta encendido');
+     }
+  else {
+    print('El motor esta apagado');
+  }
+  
+  
+  // LISTAS, coleccion de objetos que tienen algo en comun
+  
+  List <int> numeros2=[1,2,3,4,5];
+  
+  print(numeros2);
+  
+  numeros2.add(8);
+  
+  print(numeros2);
+  
+    // LISTAS DE TAMAÑO FIJO,
+  
+  List masNumeros= List(10);
+  print (masNumeros);
+  
+  masNumeros[0]=1;
+  print (masNumeros);
+}
