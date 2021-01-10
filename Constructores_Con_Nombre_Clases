@@ -6,7 +6,7 @@ void main(){
   //final wolverine=new Heroe('Logan', 'Regeneracion');
   
   final rawJson= '{"nombre": "Logan", "poder":"Regeneracion"}';
-  final parsedJson=json.decode( rawJson );
+  Map parsedJson=json.decode( rawJson );
   
   //print(parsedJson);
   
@@ -26,7 +26,7 @@ class Heroe{
   Heroe(this.nombre, this.poder);
   
   //Constructor con Nombre
-  Heroe.fromJson( parsedJson ){
+  Heroe.fromJson( Map parsedJson ){
     nombre=parsedJson['nombre'];
     poder=parsedJson['poder'];
     
