@@ -3,6 +3,11 @@ void main(){
   final wolverine =new Heroe(poder: 'Regeneracion', nombre:'Logan');
   
   print(wolverine);
+  
+  
+  final deadpool =new Heroe2(poder: 'Todos', nombre:'Deadpool');
+  
+  print(deadpool);
 
 }
 
@@ -16,6 +21,7 @@ class Heroe{
   String nombre;
   String poder;
   
+  //constructor tradicional
   Heroe({String nombre='Sin Nombre', String poder='Sin Poder'}){
     this.nombre=nombre;
     this.poder=poder;
@@ -25,5 +31,20 @@ String toString(){
   
   return 'Nombre: ${ this.nombre } - Poder: ${ this.poder }';
 }
+  }
+
+    // VERSION CORTA PARA DECLARAR CLASES
+  
+  class Heroe2 {
+    
+    String nombre;
+    String poder;
+    
+  //constructor corto
+    
+    Heroe2({ this.nombre='Sin Nombre', this.poder='Sin Poder'  });
+    
+    String toString()=>'Nombre:$nombre - Poder:$poder';
+    
   
 } 
