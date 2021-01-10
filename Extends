@@ -1,0 +1,35 @@
+// Extends sirve para extender todas las propiedades y metodos de una clase a otra
+
+void main(){
+  
+
+  final superman =new Heroe();
+  superman.nombre='Clark Kent';
+  superman.poder='Volar';
+  superman.valentia=100;
+  
+  final luthor =new Villano();
+  luthor.nombre='Lex Luthor';
+  
+  print(superman.nombre);
+   print(superman.poder);
+  print(superman.valentia);
+  
+}
+
+abstract class Personaje{
+  
+  String poder;
+  String nombre;
+}
+
+
+class Heroe extends Personaje{
+  
+  int valentia;
+}
+
+class Villano extends Personaje{
+  
+  int maldad;
+}
