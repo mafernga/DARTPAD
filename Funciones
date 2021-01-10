@@ -1,0 +1,23 @@
+void main(){
+  
+//Las funciones hay 2 formas de hacerlas, en una sola linea con flecha o en varias lineas con Return, a continuacion 2 ejemplos
+
+String mensaje= saludar(nombre:'Mario Andres', texto:'Hola'); 
+  
+  print(mensaje);
+  
+  
+  String mensaje2= saludar2(nombre:'Maria Tereza', texto:'Hola'); 
+  
+  print(mensaje2);
+}
+
+//FUNCIONES
+
+String saludar({String texto, String nombre}){
+  
+  return '$texto $nombre';
+}
+
+
+String saludar2({String texto, String nombre})=> '$texto $nombre';
