@@ -1,0 +1,32 @@
+void main(){ 
+
+ final cuadrado=new Cuadrado(); 
+ 
+  cuadrado.lado=5;
+  
+  print(cuadrado);
+  print('El area del cuadrado es: ${cuadrado.area}');
+}
+
+
+class Cuadrado{
+//el guion bajo hace  privadas las propiedades de una clase, solo va a ser visible //dentro de esta clase
+  
+  double _lado;
+   
+  
+  set lado(double valor){
+    if ( valor  <= 0){
+      
+      throw('El Lado no puede ser menor o igual a 0');
+    }
+    
+    _lado= valor;
+    
+  }
+  
+  double get area => _lado * _lado;
+  
+  toString() => 'Lado: $_lado';
+  
+}
