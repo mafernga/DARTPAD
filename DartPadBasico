@@ -65,4 +65,46 @@ void main(){
   
   masNumeros[0]=1;
   print (masNumeros);
+  
+  
+  
+   // TIPO DE DATOS MAP o DICCIONARIOS
+  
+  String propiedad='ciudad';
+  
+  Map<String, dynamic > persona ={
+    
+    'nombre'  : 'Mario',
+    'edad'    : 35,
+    'telefono': 3002904916,
+    'ciudad'  :'Medellin',
+    'soltero' : true
+  };
+  
+  print(persona);
+  print(persona['nombre']);
+  print(persona['telefono']);
+  print(persona['edad']);
+  print(persona[propiedad]);
+  
+  
+  Map<int, String> personas={
+    
+    1: 'Mario',
+    2: 'Mayte',
+    3: 'Santiago',
+    4: 'Mariana',
+    
+  };
+  
+  print (personas);
+  print (personas[1]);
+  print (personas[4]);
+  
+  // agregar un elemento al map
+  
+  personas.addAll({5: 'Laura'});
+  print (personas);
 }
+
+
