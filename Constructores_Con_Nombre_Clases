@@ -1,0 +1,36 @@
+import 'dart:convert';
+
+void main(){ 
+
+  
+  //final wolverine=new Heroe('Logan', 'Regeneracion');
+  
+  final rawJson= '{"nombre": "Logan", "poder":"Regeneracion"}';
+  final parsedJson=json.decode( rawJson );
+  
+  //print(parsedJson);
+  
+  final wolverine=new Heroe.fromJson( parsedJson);
+  
+  print('Nombre: ' + wolverine.nombre);
+  print('Poder: ' +wolverine.poder);
+  
+}
+
+
+class Heroe{
+  
+  String nombre;
+  String poder;
+  
+  Heroe(this.nombre, this.poder);
+  
+  //Constructor con Nombre
+  Heroe.fromJson( parsedJson ){
+    nombre=parsedJson['nombre'];
+    poder=parsedJson['poder'];
+    
+    
+  }
+  
+}
