@@ -1,0 +1,26 @@
+
+//Un Future es una tarea asincrona que se realiza a destiempo que nos va  anotificar cuando se resuelva o haya algun error.
+
+void main(){
+  
+  
+  print('Estamos a punto de pedir datos');
+  
+  httpGet('http://api.nasa.com/aliens').then((data){
+    
+    print(data);
+  });
+  
+  
+  print('Ultima Linea');
+}
+
+
+
+
+Future <String> httpGet(String url){
+  
+  return Future.delayed(new Duration( seconds: 5), (){
+    return 'Hola Mundo';
+  });
+}
