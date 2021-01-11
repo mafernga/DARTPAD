@@ -1,0 +1,27 @@
+
+//Async  me ayuda a transformar una funcion en una tarea asincrona y el Await me va a permitir esperar a que se resuelva la misma ya sea que de un error o que se resuelva
+//Para usar un await siempre debe estar dentro de una funcion que tenga async, de lo contrario daria un error.  Ojo no se pueden hacer constructores asincronos, no s ele piede asignar a un contructor la funcion Async
+
+void main() async {
+  
+  
+  print('Estamos a punto de pedir datos');
+  
+  String data = await httpGet('http://api.nasa.com/aliens');
+    
+    print(data);
+  
+  
+  
+  print('Ultima Linea');
+}
+
+
+
+
+Future <String> httpGet(String url){
+  
+  return Future.delayed(new Duration( seconds: 5), (){
+    return 'Hola Mundo';
+  });
+}
